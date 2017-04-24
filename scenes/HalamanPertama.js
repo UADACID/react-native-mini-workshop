@@ -17,7 +17,6 @@ export default class HalamanPertama extends Component {
 
   static navigationOptions = {
     headerVisible: false,
-    title: 'Welcome',
   }
 
   handleToHalamanDua(){

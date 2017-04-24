@@ -46,13 +46,11 @@ const MyTab = TabNavigator({
 
 export const App = StackNavigator({
   HalamanPertama: {
-    screen: HalamanPertama
+    screen: HalamanPertama,
+
   },
   HalamanKedua: {
     screen: HalamanKedua,
-    navigationOptions: {
-      wow: 'Settings',
-    },
   },
   MyTab: {
     screen: MyTab,

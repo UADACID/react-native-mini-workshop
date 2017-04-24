@@ -6,6 +6,7 @@ import {
   TextInput,
   Keyboard,
   Image,
+  Platform,
 } from 'react-native';
 
 export default class HalamanPertama extends Component {
@@ -36,7 +37,7 @@ export default class HalamanPertama extends Component {
             My App
         </Text>
         <TextInput
-          style={{ height: 50, width:300 }}
+          style={{ marginLeft: Platform.OS == 'ios' ? 50 : 0, height: 50, width:300 }}
           placeholder="Nama"
           onChangeText={(text) => this.setState({text})}
         />

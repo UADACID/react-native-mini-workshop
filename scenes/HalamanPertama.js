@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   TextInput,
   Keyboard,
+  Image,
 } from 'react-native';
 
 export default class HalamanPertama extends Component {
@@ -27,22 +28,28 @@ export default class HalamanPertama extends Component {
 
   render() {
     return (
-      <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+      <Image
+        source={{uri: 'https://nyimpeni.cybermantra.net/images/general/1493076558_walpaper.jpg'}}
+        resizeMode="stretch"
+        style={{ flex:1, justifyContent:'center', alignItems:'center' }}>
+        <Text
+          style={{ fontSize:45, color:'#FFF', marginBottom:200}}>
+            My App
+        </Text>
         <TextInput
-          style={{height: 50, width:300}}
-          placeholder="Isi dengan nama anda!"
+          style={{ height: 50, width:300 }}
+          placeholder="Nama"
           onChangeText={(text) => this.setState({text})}
         />
         <TouchableOpacity
         onPress={() => this.handleToHalamanDua()}
-        style={{width:300, height:50, marginTop:20, justifyContent:'center', alignItems:'center', backgroundColor:'#e74c3c', borderRadius:10}}>
+        style={{ width:300, height:50, marginTop:20, justifyContent:'center', alignItems:'center', backgroundColor:'#d35400', borderRadius:10}}>
           <Text
-            style={{color:'white'}}
-            >
-            Tekan Ini !!!
+            style={{color:'white'}}>
+              Tekan Ini !!!
           </Text>
         </TouchableOpacity>
-      </View>
+      </Image>
     );
   }
 }

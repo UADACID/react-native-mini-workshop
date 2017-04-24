@@ -33,7 +33,7 @@ export default class HalamanPertama extends Component {
         resizeMode="stretch"
         style={{ flex:1, justifyContent:'center', alignItems:'center' }}>
         <Text
-          style={{ fontSize:45, color:'#FFF', marginBottom:200}}>
+          style={{ fontSize:45, color:'#FFF', marginBottom:200, backgroundColor:'rgba(0, 128, 129, 0)'}}>
             My App
         </Text>
         <TextInput

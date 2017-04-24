@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Platform
+} from 'react-native';
 import HalamanPertama from './scenes/HalamanPertama';
 import HalamanKedua from './scenes/HalamanKedua';
 import Tab1 from './scenes/tab/tab1';
@@ -28,7 +31,7 @@ const MyTab = TabNavigator({
     },
   },
 },{
-  tabBarPosition:'top',
+  tabBarPosition:Platform.OS == 'ios' ? 'bottom':'top',
   tabBarOptions:{
     activeTintColor: '#FFF',
     labelStyle: {

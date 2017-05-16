@@ -5,13 +5,29 @@ import {
   Image,
 } from 'react-native';
 import { NavigationActions } from 'react-navigation'
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 
 export default class HalamanKedua extends Component {
 
   static navigationOptions = ({ navigation }) => ({
     title: navigation.state.params.nama + "'s Page!",
-    // headerRight: <Text>kanan</Text>,
+    headerRight: (
+      <View style={{flexDirection:'row', marginRight:10, justifyContent:'space-around', width:70}}>
+        <Icon name="lock" onPress={navigation.state.params.handleSave} size={20} color="#19B5FE" />
+        <Icon name="bars" size={20} color="#000" />
+      </View>
+    ),
   });
+
+  componentDidMount() {
+      this.props.navigation.setParams({ handleSave:this.handleSave });
+  }
+
+  handleSave(){
+    alert("wkwkwk")
+  }
 
   render() {
     const {nama} = this.props.navigation.state.params;
